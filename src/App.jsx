@@ -83,7 +83,7 @@ function App(){
     {/* base url:   http://api.weatherapi.com/v1 */}
     <div id='main'>
     <div className='nav'>
-      <img src='../public/logo3.png' className='heading'/>
+      <img src='../logo3.png' className='heading'/>
       <div className='whether_dashhbord'>
         <input type='text' id='inp' placeholder="Let's Visit..." autoFocus spellCheck  value={city} onChange={(event)=>{setCity(event.target.value)}}/>
         <button id='btn' autoFocus  onClick={searchWeather}>Search</button>
