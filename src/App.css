@@ -106,6 +106,7 @@
   border: .5px solid black;
   width: 5rem;
   padding: .3rem;
+  outline: none;
   border-radius: .2rem;
   cursor: pointer;
 }
