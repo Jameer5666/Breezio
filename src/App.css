@@ -209,10 +209,10 @@ background-color: rgba(13, 14, 13, 0.103);
     padding: .3rem;
     width: 100%;
     font-size: 68%;
-    height: 16vh;
+    height: 28vh;
     justify-content: center;
-    column-gap: 6px;
-    row-gap: 1rem;
+    column-gap: 4px;
+    row-gap: 0.1px;
     align-items: center;
 }
 #astro-parent{
@@ -220,7 +220,7 @@ background-color: rgba(13, 14, 13, 0.103);
   width: 30vw;
   height: 95%;
   flex-direction: column;
-  row-gap: 1rem;
+  row-gap: .2rem;
   font-size: x-small;
 
 }

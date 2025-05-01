@@ -40,6 +40,7 @@ function App(){
 
         .then((response) => response.json())
         .then((data1) => {
+
           setWeather1(data1);
         })
         .catch((error) => {
@@ -66,6 +67,7 @@ function App(){
     fetch(`${url}?key=${api_key}&q=Ahmadpur, maharashtra`)
       .then((response) => response.json())
       .then((data) => {
+
         setWeather1(data);
       })
       .catch((error) => {
@@ -122,9 +124,9 @@ function App(){
             </div>
             <div id='astro-child2' className='astro-child2'>
               <div id='region'>
-              <h4>{weather.location.name}</h4>
-              <h4>{weather.location.region}</h4>
-              <h4>{weather.location.country}</h4>
+              <h6>{weather.location.name}</h6>
+              <h6>{weather.location.region}</h6>
+              <h6>{weather.location.country}</h6>
               </div>
 
 
@@ -132,7 +134,7 @@ function App(){
               <h2>ALERTS:</h2>
               {weather1?.alerts?.alert?.length > 0 ? (
               weather1.alerts.alert.map((alert, index) => (
-              <p key={index}>{alert.headline}</p>
+              <li key={index}>{alert.headline}</li>
               ))
               ) : (
                 <p>No alerts available</p>
