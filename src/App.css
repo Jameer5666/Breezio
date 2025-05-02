@@ -26,7 +26,7 @@
 .nav{
   display: flex;
   /* width: 100vw; */
-  width: 87vw;
+  width: 88vw;
     row-gap: 1rem;
     column-gap: 4px;
   align-items: center;
@@ -54,6 +54,7 @@
   /* width: 10vw;
   height: 2rem; */
   width: 6.5rem;
+  box-shadow: 2px 2px 2px white, 2px 2px 2px black , 2px 0px 2px blue;
   height: 3rem;
   text-align: center;
   text-shadow: 0px 2px 2px rgb(14, 160, 251),0px 2px 2px black, 0px 2px 2px blue;
@@ -66,7 +67,7 @@
   background-color: rgba(13, 5, 5, 0.74);
 }
 .whether_dashhbord{
-  
+  box-shadow: 2px 2px 2px white, 2px 2px 2px black , 2px 0px 2px blue;
   background-color: rgba(255, 255, 255, 0.36);
   height: 48px;
   /* width: 332px; */
@@ -88,7 +89,7 @@
   height: max-content;
   border-radius: .2rem;
   /* width: 20rem; */
-  width: 67%;
+  width: 80%;
   background-color: rgba(249, 240, 255, 0.36);
   height: 2rem;
   padding: .2rem;
@@ -104,7 +105,7 @@
   border: .7px;
   height: 2rem;
   border: .5px solid black;
-  width: 5rem;
+  width: 2rem;
   padding: .3rem;
   outline: none;
   border-radius: .2rem;
@@ -113,16 +114,27 @@
 #btn:active{
   border: 1px solid blue;
 }
+#btn:hover{
+  border: 1px solid blue;
+  scale: 1;
+  background-color: rgba(127, 208, 255, 0.644);
+  transition: .9s all;
+}
 .child2{
   background-color: rgba(255, 255, 255, 0.36);
   padding: 10px 15px;
   display: flex;
   flex-wrap: wrap;
-  width: 91%;
+  width: 88vw;
   justify-content: center;
   align-items: center;
   border-radius: .3rem;
   column-gap: .3rem;
+}
+#date{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .child2 img{
@@ -156,7 +168,7 @@
   align-content: center;
   column-gap: .3rem;
   row-gap: 1rem;
-  width: 95%;
+  width: 92vw;
   justify-content: space-around;
 }
 .forecast{
@@ -167,7 +179,7 @@
   background-color: rgba(255, 255, 255, 0.36);
   padding: 1rem;
   column-gap: 1rem;
-  width: 87vw;
+  width: 88vw;
   height: 100%;
   border-radius: 5px;
 }
@@ -189,9 +201,10 @@
   background-color: rgba(13, 14, 13, 0.103);
   border-radius: 4px;
   padding: .5rem;
+  font-size: 10px;
   width: 53vw;
-  height: 95%;
-  row-gap: 10%;
+  height: 100%;
+  row-gap: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -204,22 +217,25 @@
   flex-direction: row;
 }
 #astro-child2{
-  display: flex
-;
-background-color: rgba(13, 14, 13, 0.103);
-    padding: .3rem;
-    width: 100%;
-    font-size: 68%;
-    height: 28vh;
-    justify-content: center;
-    column-gap: 4px;
-    row-gap: 0.1px;
-    align-items: center;
+  display: flex;
+  background-color: rgba(13, 14, 13, 0.103);
+  padding: .3rem;
+  width: 100%;
+  padding-top: 1rem;
+  font-size: 68%;
+  height: 28vh;
+  overflow: scroll;
+  scrollbar-width: none;
+
+  justify-content: center;
+  column-gap: 4px;
+  row-gap: 0.1px;
+  align-items: center;
 }
 #astro-parent{
   display: flex;
   width: 30vw;
-  height: 95%;
+  height: 100%;
   flex-direction: column;
   row-gap: .2rem;
   font-size: x-small;

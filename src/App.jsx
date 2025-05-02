@@ -5,7 +5,7 @@ function App(){
   const [weather,setweather]=useState([])
   const [city,setCity]=useState('');
   const [weather1, setWeather1] = useState(null);
-  // const [day,setDay]=useState([])
+  
 
   useEffect(()=>{
      const url = "https://api.weatherapi.com/v1/forecast.json"
@@ -64,7 +64,7 @@ function App(){
   useEffect(() => {
     const url='https://api.weatherapi.com/v1/alerts.json';
     const api_key='e36846d03c354b11842132913252804';
-    fetch(`${url}?key=${api_key}&q=Ahmadpur, maharashtra`)
+    fetch(`${url}?key=${api_key}&q=Mumbai`)
       .then((response) => response.json())
       .then((data) => {
 
@@ -86,7 +86,7 @@ function App(){
       <img src='../logo3.png' className='heading'/>
       <div className='whether_dashhbord'>
         <input type='text' id='inp' placeholder="Let's Visit..." autoFocus spellCheck  value={city} onChange={(event)=>{setCity(event.target.value)}}/>
-        <button id='btn' autoFocus  onClick={searchWeather}>Search</button>
+        <img src='../search.png' id='btn' autoFocus  onClick={searchWeather}/>
       </div>
     </div>
       
@@ -105,7 +105,7 @@ function App(){
           <div className='child4'>
               <div className='forecast'>
               <div id='astro'>
-              <div>
+              <div id='date'>
               <img src={weather.forecast.forecastday[0].day.condition.icon}/>
               <h5>{weather.forecast.forecastday[0].date}</h5>
               </div>
@@ -118,6 +118,7 @@ function App(){
               </div>
               <div id='astro-parent'>
               <div id='astro-child2'>
+              <img src={weather.forecast.forecastday[0].day.condition.icon} style={{width:"4vw"}}/>
               <p><strong>weather</strong><br/>{weather.forecast.forecastday[0].day.condition.text}</p>
               <p><strong>Wind Speed</strong><br/>{weather.current.wind_kph}kph</p>
               <p><strong>Max-Temp</strong><br/>{weather.forecast.forecastday[0].day.maxtemp_c}°C</p>
@@ -164,7 +165,7 @@ function App(){
               <h6>Wind Speed {weather.current.wind_kph}kph</h6>
               <h6>Max-Temp {weather.forecast.forecastday[0].day.maxtemp_c}°C</h6>
             </div> */}
-
+              
             <div className='Tforecast'>
             <img src={weather.forecast.forecastday[0].hour[0].condition.icon}/>
             <p>{weather.forecast.forecastday[0].hour[0].time.slice(10,16)}</p>
